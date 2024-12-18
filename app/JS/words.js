@@ -229,4 +229,4 @@ const randomWords = [
       "definition": "Characterized by strong winds."},
   
 ];
- export { randomWords }
+ export { randomWords };

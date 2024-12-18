@@ -49,6 +49,15 @@ body
     margin: 0;
     padding: 0;
     font-size: 14px;
+    box-sizing: border-box;
+    font-family: "Sniglet", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+h1{
+    font-family: "DynaPuff", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 3rem;
     
-
 }
