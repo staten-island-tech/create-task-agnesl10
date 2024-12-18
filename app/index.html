@@ -2,26 +2,73 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/icon.png" />
+    <link rel="stylesheet" href="CSS/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Sniglet:wght@400;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Sniglet:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
     <title>Wordle Create Task</title>
   </head>
   <body>
     <div id="game">
       <h1>wordle</h1>
       <div class="board">
-        <div class="row" id="guess1"></div>
-        <div class="row" id="guess2"></div>
-        <div class="row" id="guess3"></div>
-        <div class="row" id="guess4"></div>
-        <div class="row" id="guess5"></div>
-        <div class="row" id="guess6"></div>
+        <div class="row" id="guess1">
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+        </div>
+        <div class="row" id="guess2">
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+        </div>
+        <div class="row" id="guess3">
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+        </div>
+        <div class="row" id="guess4">
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+        </div>
+        <div class="row" id="guess5">
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+        </div>
+        <div class="row" id="guess6">
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+          <div class="tile"></div>
+        </div>
       </div>
-      <input class="user" type="text" maxlength="5" placeholder="Enter your guess..."> 
-      <button class="btn" type="button">submit</button>
+      <div class="form">
+        <input
+          class="user"
+          type="text"
+          maxlength="5"
+          placeholder="Enter your guess..."
+        />
+        <button class="btn" type="button">submit</button>
+      </div>
       <button class="hint" type="button">hint</button>
     </div>
     <script type="module" src="JS/main.js"></script>
