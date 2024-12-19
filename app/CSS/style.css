@@ -50,22 +50,28 @@ body
     padding: 0;
     font-size: 14px;
     box-sizing: border-box;
-    font-family: "Sniglet", serif;
-    font-weight: 400;
+    font-family: "Roboto", serif;
+    font-weight: 300;
     font-style: normal;
 }
 h1{
     font-family: "Cherry Bomb One", serif;
+    font-family: "Fjalla One", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 5rem;
+    font-size: 4rem;
     padding: 0;
-    margin: 0;
+    margin: 1rem;
     text-align: center;
 }
 .form{
     text-align: center;
 }
-.hint{
-    text-align
+.tile{
+    border: 3px solid var(--secondary);
+    background-color: white;
+    padding: 5px;
+    margin: 5;
+    width: 3rem;
+    height: 3rem;
 }

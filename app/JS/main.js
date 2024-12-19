@@ -14,3 +14,6 @@ function setColor(letter) {
     DOMSelectors.tiles.classlist.add("incorrect");
   }
 }
+
+const random = randomWords[randomIndex];
+console.log(random);
