@@ -71,7 +71,19 @@ h1{
     border: 3px solid var(--secondary);
     background-color: white;
     padding: 5px;
-    margin: 5;
+    margin: 15px;
     width: 3rem;
     height: 3rem;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+.row{
+    display:flex;
+    justify-content: center;
+    padding: 1;
 }
