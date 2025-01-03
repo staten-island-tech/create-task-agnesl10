@@ -64,6 +64,16 @@ h1{
     margin: 1rem;
     text-align: center;
 }
+h4{
+    font-family: "Cherry Bomb One", serif;
+    font-family: "Fjalla One", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+    padding: 0;
+    margin: 5px;
+    text-align: center;
+}
 .btn{
     text-align: center;
     align-items: center;
@@ -74,21 +84,15 @@ h1{
     background-color: var(--secondary);
     color: black;
     border: 3px solid var(--secondary);
-    border-radius: 3px;
-    padding: 5px;
+    border-radius: 8px;
+    padding: 15px;
+    font-weight: 700;
+    color: rgb(92, 92, 92);
 }
-.helpbtn{
-    text-align: right;
-    align-items: right;
-    font-size: 0.7rem;
-    background-color: transparent;
-    color: rgb(42, 42, 42);
-    margin: 0 auto;
-    border-color: transparent;
-}
-#tile{
+input{
     border: 3px solid var(--secondary);
     background-color: white;
+    color: rgb(92, 92, 92);
     caret-color: transparent;
     text-align: center;
     font-size: 3rem;
@@ -99,6 +103,8 @@ h1{
     display: flex;
     justify-content: center;
     flex-direction: row;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 .container{
     display: flex;
