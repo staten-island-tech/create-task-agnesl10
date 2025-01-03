@@ -1,6 +1,6 @@
 DOMSelectors = {
   rows: document.querySelector(".row"),
-  tiles: document.querySelector(".tile"),
+  tiles: document.querySelector("#tile"),
   input: document.querySelector(".user"),
   game: document.querySelector(".game"),
   container: document.querySelector(".container"),

@@ -2,7 +2,7 @@ import "../CSS/style.css";
 import { randomWords } from "./words";
 import { DOMSelectors } from "./dom";
 
-function setColor(letter) {
+function setWord(letter) {
   //classes: correct, present, incorrect
   DOMSelectors.tiles.classList.remove("correct", "present", "incorrect");
   //set the classes
