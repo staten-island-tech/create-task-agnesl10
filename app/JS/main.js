@@ -1,36 +1,62 @@
 import "../CSS/style.css";
 import { randomWords } from "./words";
 import { DOMSelectors } from "./dom";
-
+//attempts
+//check if right or wrong
+//then update attempts
 const target = randomWords[Math.floor(Math.random() * randomWords.length)].word;
 console.log(target);
 
-function setWord(letter) {
+
+
+function setWord() {
+
   const targetWord = target.toUpperCase();
+  const attempts = 6;
 
-  if ((DOMSelectors.input = "")) {
-    alert("there seems to be missing information. check it out.");
-  }
 
-  let index = 0;
   DOMSelectors.button.addEventListener("click", function (e) {
-    DOMSelectors.tiles.classList.remove("correct", "present", "incorrect");
-    //set the classes
-    if (letter === input[index]) {
-      DOMSelectors.tiles.classlist.add("correct"); //add correct == css color change; same for the others ..
-    } else if (targetWord.includes(letter[index])) {
-      DOMSelectors.tiles.classlist.add("present");
-    } else {
-      DOMSelectors.tiles.classlist.add("incorrect");
+    if ((DOMSelectors.input = "")) {
+      alert("there seems to be missing information. check it out.");
     }
-    index = index + 1;
   });
+
+
+
+  while (i = 0, i < attempts, i++){
+    DOMSelectors.button.addEventListener("click", function (e) {
+      DOMSelectors.tiles.classList.remove("correct", "present", "incorrect");
+    //set the classes
+      input.forEach((letter) => {
+      if (letter === input) {
+      DOMSelectors.tiles.classlist.add("correct"); //add correct == css color change; same for the others ..
+      } else if (targetWord.includes(input)) {
+      DOMSelectors.tiles.classlist.add("present");
+      } else {
+      DOMSelectors.tiles.classlist.add("incorrect");
+      }})}
+
+
+      DOMSelectors.button.addEventListener("click", function (e) {
+        DOMSelectors.container.insertAdjacentHTML(
+          "beforeend",
+          `<div class="row" id="guess" />
+          <input type="text" maxlength="1" class="" id="tile1" />
+          <input type="text" maxlength="1" class="" id="tile2" />
+          <input type="text" maxlength="1" class="" id="tile3" />
+          <input type="text" maxlength="1" class="" id="tile4" />
+          <input type="text" maxlength="1" class="" id="tile5" />
+          </div>`
+        );
+      })
+  };
+
 }
 setWord();
-DOMSelectors.rows.forEach((input, index) => {
-  input.addEventListener("input", () => {
-    if (input.value.length === input.maxLength) {
-      const nextInput = input[index + 1];
+DOMSelectors.rows.forEach((tiles, index) => {
+  DOMSelectors.tiles.addEventListener("input", () => {
+    if (tiles.value.length === tiles.maxLength) {
+      const nextInput = tiles[index + 1];
       if (nextInput) {
         nextInput.focus();
       }
@@ -38,15 +64,4 @@ DOMSelectors.rows.forEach((input, index) => {
   });
 });
 
-DOMSelectors.button.addEventListener("click", function (e) {
-  DOMSelectors.container.insertAdjacentHTML(
-    "beforeend",
-    `<div class="row" id="guess" />
-    <input type="text" maxlength="1" class="" id="tile1" />
-    <input type="text" maxlength="1" class="" id="tile2" />
-    <input type="text" maxlength="1" class="" id="tile3" />
-    <input type="text" maxlength="1" class="" id="tile4" />
-    <input type="text" maxlength="1" class="" id="tile5" />
-    </div>`
-  );
-});
+
