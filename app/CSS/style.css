@@ -124,3 +124,12 @@ input{
 .incorrect{
     background-color: var(--incorrect);
 }
+.testcorrect{
+    background-color: var(--correct);
+}
+.testpresent{
+    background-color: var(--present);
+}
+.testincorrect{
+    background-color: var(--incorrect);
+}

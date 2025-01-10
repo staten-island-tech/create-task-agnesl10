@@ -6,7 +6,7 @@ const DOMSelectors = {
   // row4: document.querySelector("#guess4"),
   // row5: document.querySelector("#guess5"),
   // row6: document.querySelector("#guess6"),
-  tiles: document.querySelector("#tile"),
+  tiles: document.querySelectorAll("#tile"),
   container: document.querySelector(".board"),
   button: document.querySelector(".submit"),
   hintbtn: document.querySelector(".hint"),

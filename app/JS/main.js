@@ -7,18 +7,18 @@ import { DOMSelectors } from "./dom";
 //then update attempts
 
 const target = randomWords[Math.floor(Math.random() * randomWords.length)].word;
-console.log(target);
+const targetWord = target.toUpperCase();
+console.log(targetWord);
 let attempts = 0;
-let guess = "";
 
 function setWord() {
-  const targetWord = target.toUpperCase();
-
-  DOMSelectors.button.addEventListener("click", function (e) {
-    if ((DOMSelectors.input = "")) {
+  DOMSelectors.button.addEventListener("click", function (event) {
+    event.preventDefault();
+    if ((DOMSelectors.tiles.value = "")) {
       alert("there seems to be missing information. check it out.");
+    } else {
+      addRow();
     }
-    addRow();
   });
 }
 
@@ -31,11 +31,11 @@ function addRow() {
     DOMSelectors.container.insertAdjacentHTML(
       "beforeend",
       `<div class="row" id="guess" />
-        <input type="text" maxlength="1" class="" id="tile1" />
-        <input type="text" maxlength="1" class="" id="tile2" />
-        <input type="text" maxlength="1" class="" id="tile3" />
-        <input type="text" maxlength="1" class="" id="tile4" />
-        <input type="text" maxlength="1" class="" id="tile5" />
+        <input type="text" maxlength="1" class="" id="tile" />
+        <input type="text" maxlength="1" class="" id="tile" />
+        <input type="text" maxlength="1" class="" id="tile" />
+        <input type="text" maxlength="1" class="" id="tile" />
+        <input type="text" maxlength="1" class="" id="tile" />
       </div>`
     );
   } else {
@@ -43,30 +43,40 @@ function addRow() {
   }
 }
 
-function checkGuess() {
+function checkGuess(row) {
+  let guess = "";
   document
-    .querySelectorAll(".test")
+    .querySelectorAll("#tile")
+    .forEach((tile) => {
+      if (tile.getAttribute("data-row") === row) {
+      }
+    })
     .forEach((input) => (guess = guess + `${input.value}`));
   console.log(guess);
 
   let i = 0;
-  DOMSelectors.tiles.classList.remove("correct", "incorrect", "present");
-  for (guess[i] in guess) {
+
+  /*  for (guess[i] in guess) {
+    DOMSelectors.tiles.className.remove("correct", "incorrect", "present");
     if (guess[i] === targetWord[i]) {
       DOMSelectors.tiles.classList.add("correct");
+      i = i + 1;
       clearGuess(guess);
     } else if (targetWord.includes(guess[i])) {
       DOMSelectors.tiles.classList.add("present");
+      i = i + 1;
       clearGuess(guess);
     } else {
       DOMSelectors.tiles.classList.add("incorrect");
+      i = i + 1;
       clearGuess(guess);
     }
-  }
+  } */
 }
 
 function clearGuess(guess) {
   guess = "";
+  console.log(guess);
 }
 
 setWord();
