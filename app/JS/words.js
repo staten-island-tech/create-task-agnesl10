@@ -157,9 +157,9 @@ const randomWords = [
     definition: "A term for something or someone that is long.",
   },
   {
-    word: "milk1",
+    word: "milks",
     definition:
-      "A white liquid produced by mammals as nourishment for their young.",
+      "To extract white liquid produced by mammals as nourishment for their young.",
   },
   { word: "neary", definition: "In close proximity or near." },
   {
@@ -299,3 +299,42 @@ const randomWords = [
   { word: "windy", definition: "Characterized by strong winds." },
 ];
 export { randomWords };
+
+
+//extra stuff i toggled
+
+// <div class="row" id="guess2">
+// <input type="text" maxlength="1" class="" id="tile1" />
+// <input type="text" maxlength="1" class="" id="tile2" />
+// <input type="text" maxlength="1" class="" id="tile3" />
+// <input type="text" maxlength="1" class="" id="tile4" />
+// <input type="text" maxlength="1" class="" id="tile5" />
+// </div>
+// <div class="row" id="guess3">
+// <input type="text" maxlength="1" class="" id="tile1" />
+// <input type="text" maxlength="1" class="" id="tile2" />
+// <input type="text" maxlength="1" class="" id="tile3" />
+// <input type="text" maxlength="1" class="" id="tile4" />
+// <input type="text" maxlength="1" class="" id="tile5" />
+// </div>
+// <div class="row" id="guess4">
+// <input type="text" maxlength="1" class="" id="tile1" />
+// <input type="text" maxlength="1" class="" id="tile2" />
+// <input type="text" maxlength="1" class="" id="tile3" />
+// <input type="text" maxlength="1" class="" id="tile4" />
+// <input type="text" maxlength="1" class="" id="tile5" />
+// </div>
+// <div class="row" id="guess5">
+// <input type="text" maxlength="1" class="" id="tile1" />
+// <input type="text" maxlength="1" class="" id="tile2" />
+// <input type="text" maxlength="1" class="" id="tile3" />
+// <input type="text" maxlength="1" class="" id="tile4" />
+// <input type="text" maxlength="1" class="" id="tile5" />
+// </div>
+// <div class="row" id="guess6">
+// <input type="text" maxlength="1" class="" id="tile1" />
+// <input type="text" maxlength="1" class="" id="tile2" />
+// <input type="text" maxlength="1" class="" id="tile3" />
+// <input type="text" maxlength="1" class="" id="tile4" />
+// <input type="text" maxlength="1" class="" id="tile5" />
+// </div>

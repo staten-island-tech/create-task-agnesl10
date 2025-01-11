@@ -28,16 +28,18 @@ function addRow() {
   if (attempts < 5) {
     attempts = attempts + 1;
     console.log(attempts);
+    let index = 2;
     DOMSelectors.container.insertAdjacentHTML(
       "beforeend",
       `<div class="row" id="guess" />
-        <input type="text" maxlength="1" class="" id="tile" />
-        <input type="text" maxlength="1" class="" id="tile" />
-        <input type="text" maxlength="1" class="" id="tile" />
-        <input type="text" maxlength="1" class="" id="tile" />
-        <input type="text" maxlength="1" class="" id="tile" />
+        <input type="text" maxlength="1" class="" id="tile" data-row="${index}"/>
+        <input type="text" maxlength="1" class="" id="tile" data-row="${index}"/>
+        <input type="text" maxlength="1" class="" id="tile" data-row="${index}"/>
+        <input type="text" maxlength="1" class="" id="tile" data-row="${index}"/>
+        <input type="text" maxlength="1" class="" id="tile" data-row="${index}"/>
       </div>`
     );
+    index = index + 1;
   } else {
     alert("thats the last guess. you suck.");
   }
@@ -48,10 +50,10 @@ function checkGuess(row) {
   document
     .querySelectorAll("#tile")
     .forEach((tile) => {
-      if (tile.getAttribute("data-row") === row) {
+      if (tile.getAttribute("data-row") === "1") {
+        guess = guess + `${tile.value}`.toUpperCase();
       }
     })
-    .forEach((input) => (guess = guess + `${input.value}`));
   console.log(guess);
 
   let i = 0;
