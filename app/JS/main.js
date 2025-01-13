@@ -27,7 +27,7 @@ function addRow() {
 
   if (attempts < 5) {
     attempts = attempts + 1;
-    console.log(attempts);
+    console.log("attempts is", attempts);
     let index = 2;
     DOMSelectors.container.insertAdjacentHTML(
       "beforeend",
@@ -45,16 +45,17 @@ function addRow() {
   }
 }
 
-function checkGuess(row) {
+function checkGuess() {
   let guess = "";
-  document
-    .querySelectorAll("#tile")
-    .forEach((tile) => {
-      if (tile.getAttribute("data-row") === "1") {
-        guess = guess + `${tile.value}`.toUpperCase();
-      }
-    })
-  console.log(guess);
+  let num = 1;
+  document.querySelectorAll("#tile").forEach((tile) => {
+    if (tile.getAttribute("data-row") === `${num}`) {
+      guess = guess + `${tile.value}`.toUpperCase();
+    }
+  });
+  num = num + 1;
+  console.log("number is", num);
+  console.log("guess is", guess);
 
   let i = 0;
 
