@@ -37,9 +37,9 @@ function addRow() {
         <input type="text" maxlength="1" class="" id="tile" data-row="${index}"/>
         <input type="text" maxlength="1" class="" id="tile" data-row="${index}"/>
         <input type="text" maxlength="1" class="" id="tile" data-row="${index}"/>
-      </div>`
+      </div>`,
+      (index = index + 1)
     );
-    index = index + 1;
   } else {
     alert("thats the last guess. you suck.");
   }
