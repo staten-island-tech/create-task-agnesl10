@@ -22,13 +22,27 @@ function setWord() {
   });
 }
 
-function addRow() {
-  checkGuess();
+let index = 0;
 
-  if (attempts < 5) {
-    attempts = attempts + 1;
+function addRow() {
+  let guess = "";
+  document.querySelectorAll("#tile").forEach((tile) => {
+    if (tile.getAttribute("data-row") === `${index}`) {
+      guess = guess + `${tile.value}`.toUpperCase();
+    }
+  });
+  console.log("guess is", guess);
+
+  if (targetWord == guess) {
+    DOMSelectors.btndiv.innerHTML = "";
+    DOMSelectors.container.insertAdjacentHTML(
+      "beforeend",
+      `<h1>you got it!!</h1>`
+    );
+  } else if (attempts < 5) {
+    attempts += 1;
     console.log("attempts is", attempts);
-    let index = 2;
+    index += 1;
     DOMSelectors.container.insertAdjacentHTML(
       "beforeend",
       `<div class="row" id="guess" />
@@ -37,9 +51,9 @@ function addRow() {
         <input type="text" maxlength="1" class="" id="tile" data-row="${index}"/>
         <input type="text" maxlength="1" class="" id="tile" data-row="${index}"/>
         <input type="text" maxlength="1" class="" id="tile" data-row="${index}"/>
-      </div>`,
-      (index = index + 1)(console.log("row number", index))
+      </div>`
     );
+    console.log(index);
   } else {
     alert("thats the last guess. you suck.");
   }
@@ -47,32 +61,16 @@ function addRow() {
 
 function checkGuess() {
   let guess = "";
-  let num = 1;
   document.querySelectorAll("#tile").forEach((tile) => {
-    if (tile.getAttribute("data-row") === `${num}`) {
+    if (tile.getAttribute("data-row") === `${index}`) {
       guess = guess + `${tile.value}`.toUpperCase();
     }
   });
-  num = num + 1;
-  console.log("number is", num);
   console.log("guess is", guess);
-
-  /*  for (guess[i] in guess) {
-    DOMSelectors.tiles.className.remove("correct", "incorrect", "present");
-    if (guess[i] === targetWord[i]) {
-      DOMSelectors.tiles.classList.add("correct");
-      i = i + 1;
-      clearGuess(guess);
-    } else if (targetWord.includes(guess[i])) {
-      DOMSelectors.tiles.classList.add("present");
-      i = i + 1;
-      clearGuess(guess);
-    } else {
-      DOMSelectors.tiles.classList.add("incorrect");
-      i = i + 1;
-      clearGuess(guess);
-    }
-  } */
+  //compare this guess with the word
+  if (guess == targetWord) {
+    console.log("You Win!");
+  }
 }
 
 function clearGuess(guess) {
