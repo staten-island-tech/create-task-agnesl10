@@ -26,26 +26,29 @@ let index = 0;
 
 function innerFunc() {
   let guess = "";
+  let i = 0
+
   document.querySelectorAll("#tile").forEach((tile) => {
     if (tile.getAttribute("data-row") === `${index}`) {
       guess = guess + `${tile.value}`.toUpperCase();
+      if (guess[i] === targetWord[i]){
+        tile.classList.add("correct")
+        i++
+      } else if (targetWord.includes(guess[i])){
+        tile.classList.add("present")
+        i++
+      } else{
+        tile.classList.add("incorrect")
+        i++
+        }
     }
   })
   console.log("guess is", guess);
-
-  for (let i = 1; i <= 5; i++){
-    DOMSelectors.tiles.forEach((tile) => {
-      if (guess[i] === targetWord[i]){
-        tile.classList.add("correct")}
-      else if (targetWord.includes(guess[i])){
-        tile.classList.add("present")
-      } else{
-        tile.classList.add("incorrect")
-      }
-    })
-  }
+  
   
   if (targetWord == guess) {
+    console.log("word is guessed.")
+    DOMSelectors.tiles.forEach((tile) => tile.classList.add("correct"))
     DOMSelectors.btndiv.innerHTML = "";
     DOMSelectors.container.insertAdjacentHTML(
       "beforeend",
@@ -71,16 +74,5 @@ function innerFunc() {
   }
 }
 
-
 setWord();
 
-// DOMSelectors.rows.forEach((tiles, index) => {
-//   DOMSelectors.tiles.addEventListener("input", () => {
-//     if (tiles.value.length === tiles.maxLength) {
-//       const nextInput = tiles[index + 1];
-//       if (nextInput) {
-//         nextInput.focus();
-//       }
-//     }
-//   });
-// });

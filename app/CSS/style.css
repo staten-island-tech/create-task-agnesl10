@@ -92,7 +92,7 @@ h4{
 input{
     border: 3px solid var(--secondary);
     background-color: white;
-    color: rgb(92, 92, 92);
+    color: rgb(53, 53, 53);
     caret-color: transparent;
     text-align: center;
     font-size: 3rem;
@@ -122,14 +122,5 @@ input{
     background-color: var(--present);
 }
 .incorrect{
-    background-color: var(--incorrect);
-}
-.testcorrect{
-    background-color: var(--correct);
-}
-.testpresent{
-    background-color: var(--present);
-}
-.testincorrect{
     background-color: var(--incorrect);
 }
