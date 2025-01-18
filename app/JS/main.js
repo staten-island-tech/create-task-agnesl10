@@ -17,22 +17,34 @@ function setWord() {
     if ((DOMSelectors.tiles.value = "")) {
       alert("there seems to be missing information. check it out.");
     } else {
-      addRow();
+      innerFunc();
     }
   });
 }
 
 let index = 0;
 
-function addRow() {
+function innerFunc() {
   let guess = "";
   document.querySelectorAll("#tile").forEach((tile) => {
     if (tile.getAttribute("data-row") === `${index}`) {
       guess = guess + `${tile.value}`.toUpperCase();
     }
-  });
+  })
   console.log("guess is", guess);
 
+  for (let i = 1; i <= 5; i++){
+    DOMSelectors.tiles.forEach((tile) => {
+      if (guess[i] === targetWord[i]){
+        tile.classList.add("correct")}
+      else if (targetWord.includes(guess[i])){
+        tile.classList.add("present")
+      } else{
+        tile.classList.add("incorrect")
+      }
+    })
+  }
+  
   if (targetWord == guess) {
     DOMSelectors.btndiv.innerHTML = "";
     DOMSelectors.container.insertAdjacentHTML(
@@ -59,24 +71,6 @@ function addRow() {
   }
 }
 
-function checkGuess() {
-  let guess = "";
-  document.querySelectorAll("#tile").forEach((tile) => {
-    if (tile.getAttribute("data-row") === `${index}`) {
-      guess = guess + `${tile.value}`.toUpperCase();
-    }
-  });
-  console.log("guess is", guess);
-  //compare this guess with the word
-  if (guess == targetWord) {
-    console.log("You Win!");
-  }
-}
-
-function clearGuess(guess) {
-  guess = "";
-  console.log(guess);
-}
 
 setWord();
 
