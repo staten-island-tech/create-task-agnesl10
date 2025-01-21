@@ -70,7 +70,7 @@ function innerFunc() {
     );
     console.log(index);
   } else {
-    alert("thats the last guess. you suck.");
+    alert(`thats the last guess. the word was ${targetWord}`);
   }
 }
 
