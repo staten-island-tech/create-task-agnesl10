@@ -1,48 +1,44 @@
 const randomWords = [
   {
     word: "apple",
-    definition: "A round fruit with red or green skin and a whitish interior.",
   },
-  { word: "brave", definition: "Showing courage; not afraid to face danger." },
+  { word: "brave", },
   {
     word: "clamp",
-    definition: "A device used to hold things tightly together.",
   },
   {
     word: "drift",
-    definition: "To be carried slowly by a current of air or water.",
   },
-  { word: "enjoy", definition: "To take pleasure in something." },
+  { word: "enjoy",
+   },
   {
     word: "flame",
-    definition: "A hot, glowing gas that is produced by burning.",
   },
   {
     word: "glove",
-    definition: "A covering for the hand, typically made of leather or fabric.",
+
   },
   {
     word: "hatch",
-    definition: "To cause an egg to break open and release a young animal.",
+
   },
   {
     word: "index",
-    definition: "An alphabetical list of subjects at the back of a book.",
+
   },
-  { word: "jolly", definition: "Happy and cheerful." },
-  { word: "kneel", definition: "To rest on one's knees." },
+  { word: "jolly",  },
+  { word: "kneel", },
   {
     word: "lapse",
-    definition: "A temporary failure or decline in a condition or state.",
+
   },
   {
     word: "mango",
-    definition:
-      "A tropical fruit with a green, red, or yellow skin and sweet flesh.",
+
   },
   {
     word: "nesty",
-    definition: "A place where something is sheltered or protected.",
+
   },
   {
     word: "openy",
@@ -293,48 +289,9 @@ const randomWords = [
     word: "needy",
     definition: "Lacking basic necessities or being dependent on others.",
   },
-  { word: "great", definition: "A casual term meaning satisfactory." },
-  { word: "plumb", definition: "Exactly vertical or perpendicular." },
-  { word: "risky", definition: "Involving a chance of danger or harm." },
-  { word: "windy", definition: "Characterized by strong winds." },
+  { word: "great",  },
+  { word: "plumb", },
+  { word: "risky", },
+  { word: "windy", },
 ];
 export { randomWords };
-
-
-//extra stuff i toggled
-
-// <div class="row" id="guess2">
-// <input type="text" maxlength="1" class="" id="tile1" />
-// <input type="text" maxlength="1" class="" id="tile2" />
-// <input type="text" maxlength="1" class="" id="tile3" />
-// <input type="text" maxlength="1" class="" id="tile4" />
-// <input type="text" maxlength="1" class="" id="tile5" />
-// </div>
-// <div class="row" id="guess3">
-// <input type="text" maxlength="1" class="" id="tile1" />
-// <input type="text" maxlength="1" class="" id="tile2" />
-// <input type="text" maxlength="1" class="" id="tile3" />
-// <input type="text" maxlength="1" class="" id="tile4" />
-// <input type="text" maxlength="1" class="" id="tile5" />
-// </div>
-// <div class="row" id="guess4">
-// <input type="text" maxlength="1" class="" id="tile1" />
-// <input type="text" maxlength="1" class="" id="tile2" />
-// <input type="text" maxlength="1" class="" id="tile3" />
-// <input type="text" maxlength="1" class="" id="tile4" />
-// <input type="text" maxlength="1" class="" id="tile5" />
-// </div>
-// <div class="row" id="guess5">
-// <input type="text" maxlength="1" class="" id="tile1" />
-// <input type="text" maxlength="1" class="" id="tile2" />
-// <input type="text" maxlength="1" class="" id="tile3" />
-// <input type="text" maxlength="1" class="" id="tile4" />
-// <input type="text" maxlength="1" class="" id="tile5" />
-// </div>
-// <div class="row" id="guess6">
-// <input type="text" maxlength="1" class="" id="tile1" />
-// <input type="text" maxlength="1" class="" id="tile2" />
-// <input type="text" maxlength="1" class="" id="tile3" />
-// <input type="text" maxlength="1" class="" id="tile4" />
-// <input type="text" maxlength="1" class="" id="tile5" />
-// </div>
