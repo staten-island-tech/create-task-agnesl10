@@ -9,8 +9,9 @@ const randomWords = [
   {
     word: "drift",
   },
-  { word: "enjoy",
-   },
+  {
+    word: "enjoy",
+  },
   {
     word: "flame",
   },
@@ -26,7 +27,7 @@ const randomWords = [
     word: "index",
 
   },
-  { word: "jolly",  },
+  { word: "jolly", },
   { word: "kneel", },
   {
     word: "lapse",
@@ -289,7 +290,7 @@ const randomWords = [
     word: "needy",
     definition: "Lacking basic necessities or being dependent on others.",
   },
-  { word: "great",  },
+  { word: "great", },
   { word: "plumb", },
   { word: "risky", },
   { word: "windy", },

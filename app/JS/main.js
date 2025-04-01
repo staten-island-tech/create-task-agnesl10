@@ -2,10 +2,6 @@ import "../CSS/style.css";
 import { randomWords } from "./words";
 import { DOMSelectors } from "./dom";
 
-//attempts
-//check if right or wrong
-//then update attempts
-
 const target = randomWords[Math.floor(Math.random() * randomWords.length)].word;
 const targetWord = target.toUpperCase();
 console.log(targetWord);
